@@ -1,0 +1,48 @@
+.produs--large .produs__image{
+    width: 240px;
+    height: 300px;
+}
+
+
+.produs--large {
+    position: relative;
+}
+
+
+.produs--large .produs__info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.produs__image{ 
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.produs__title{
+    margin: 0;
+    font-size: .9rem;
+}
+
+
+.produs__year,
+.produs__rating,
+.produs__category{
+    margin-right: .3rem;
+}
+
+span{
+    font-size: .8rem;
+}
+
+.produs__info{
+    color: white;
+}
+
+.produs-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

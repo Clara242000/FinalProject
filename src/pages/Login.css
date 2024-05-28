@@ -1,0 +1,19 @@
+.page.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.page.login h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page.login p {
+  font-size: 1.2rem;
+  color: #555;
+}

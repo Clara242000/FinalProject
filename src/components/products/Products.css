@@ -1,0 +1,13 @@
+.produs-list{
+    display: flex;
+    /* flex-flow: wrap; */
+    flex-wrap: wrap;
+    gap: 70px;
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
