@@ -79,7 +79,7 @@ body{
 
 input{
   background-color: var(--primary-color);
-  border: none;
+  /* border: none ; */
 }
 
 h1,

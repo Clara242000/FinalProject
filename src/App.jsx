@@ -6,12 +6,15 @@ import Home from './pages/Home';
 import Products from './components/products/Products';
 import WhatsNew from './pages/WhatsNew';
 import Contact from './pages/Contact';
-import Login from './pages/Login';
 import './App.css';
 import Search from './components/search/Search';
 import { useState } from 'react';
 import ProduseDetails from './components/produse-details/ProduseDetails';
 import CreateProduct from './components/create-product/CreateProduct';
+import { Register } from './components/auth/register/Register';
+import Login from './components/auth/login/Login';
+import EditProduct from './components/edit-product/EditProduct'
+
 
 // export const ProdusContext = React.createContext();  -de la willi
 
@@ -39,8 +42,10 @@ function onSearchChange(_searchTerm){
     {/* </ProdusContext>  - de la willi*/}
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
        <Route path="/produs/:idFromPath" element = {<ProduseDetails/>}/>
        <Route path='/create-product' element={<CreateProduct/>}></Route>
+       <Route path='/edit-product/:idFromPath' element={<EditProduct/>}></Route>
        {/* <Route path='/edit-movie/:idFromPath' element={<CreateProduct/>}></Route> - de la willi */}
     </Routes>
 

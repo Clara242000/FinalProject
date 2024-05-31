@@ -22,13 +22,13 @@ async function retrieveProduct(setProduct, produsid){
 
     useEffect( () => {
        retrieveProduct(setProduct, idFromPath); 
-    }, []);
+    }, [idFromPath]);
 
     useEffect(() => {
         if(!produs){
             navigate('/');
         }
-    }, [produs]);
+    }, [produs, navigate]);
 
     if (!produs){
     return;
@@ -53,12 +53,17 @@ async function retrieveProduct(setProduct, produsid){
         
         }
 
-
-        function editProduct(){
-            navigate(`/edit-movie/${id}`)
+        function updateButton(){
+            navigate(`/edit-product/${id}`)
         }
 
 
+        // function editProduct(){
+        //     navigate(`/edit-product/${id}`);
+             
+        // }
+
+         
     return(
         <section>
             <header>
@@ -70,7 +75,7 @@ async function retrieveProduct(setProduct, produsid){
             <p className="produs-detail__category" >Category : {category}</p>
             
             <button onClick={deleteProduct}>Delete product</button>
-            <button onClick={editProduct}>Edit product</button>
+            <button onClick={updateButton}>Edit product</button>
 
         </section>
     )

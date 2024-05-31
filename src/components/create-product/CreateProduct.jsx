@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import "./CreateProduct.css";
 
-//citire,creare produse- GET , POST
+//citire,creare produse-  POST
 
 export default function CreateProduct() {
     const navigate = useNavigate();
+    
 
   function saveProduct(event) {
     event.preventDefault();
@@ -22,6 +23,9 @@ export default function CreateProduct() {
 
     fetch("http://localhost:3000/produse", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(product),
     })
         .then(() => navigate('/products'));
@@ -42,6 +46,7 @@ export default function CreateProduct() {
           type="text"
           required
           minLength={5}
+          // defaultValue={selectedProduct?.title}
         />
       </fieldset>
 
