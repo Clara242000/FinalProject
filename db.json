@@ -26,6 +26,18 @@
       "password": "$2a$10$m4IQbbtUIThA/dAzgVGU/eC.P4mlAgbriJsFTg9.ubwJUKbEslDXa",
       "username": "Marian",
       "id": 4
+    },
+    {
+      "email": "heloo@gamil.com",
+      "password": "$2a$10$/H3dvEqP.WJd3NQYdD0/VeYr9m4R2k/8T5elXnAIWpxYveIdCj0.a",
+      "username": "Hello",
+      "id": 5
+    },
+    {
+      "email": "wili@gmail.cpm",
+      "password": "$2a$10$ffL2Mf922q32jLD3Q0a4POMZtLmJB1s4Z3ChWMk4B0kmXAj7GBpF.",
+      "username": "Wili",
+      "id": 6
     }
   ],
   "produse": [
@@ -268,54 +280,6 @@
       "category": "Men",
       "bookmark": false,
       "whatsnewmodel": true
-    },
-    {
-      "id": "0417",
-      "title": "Ballerina",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2003",
-      "rating": "ap",
-      "category": "product"
-    },
-    {
-      "id": "1e31",
-      "title": "ballerina",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2003",
-      "rating": "pg",
-      "category": "leotards"
-    },
-    {
-      "title": "ggggggggg",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2024-05-31",
-      "rating": "ap",
-      "category": "product",
-      "id": "N-kuE2a"
-    },
-    {
-      "title": "fxcvbgnm",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2024-06-08",
-      "rating": "pg",
-      "category": "product",
-      "id": "pudQLMG"
-    },
-    {
-      "title": "aaaaaaaaa",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2024-06-08",
-      "rating": "18+",
-      "category": "product",
-      "id": "0dfLPAN"
-    },
-    {
-      "title": "yyyyyyyyyyy",
-      "imageUrl": "https://t3.ftcdn.net/jpg/04/85/60/70/360_F_485607028_2JW8GkFoJjdZFS4RcRwPuRBSBLpNMwzK.jpg",
-      "year": "2024-05-31",
-      "rating": "18+",
-      "category": "product",
-      "id": "Htsva_J"
     }
   ]
 }

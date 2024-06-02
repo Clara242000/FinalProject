@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./CreateProduct.css";
+import { useContext } from "react";
+import { TokenContext } from "../../App";
 
 //citire,creare produse-  POST
 
 export default function CreateProduct() {
     const navigate = useNavigate();
-    
+    const { token } = useContext(TokenContext);
 
   function saveProduct(event) {
     event.preventDefault();
@@ -25,6 +27,7 @@ export default function CreateProduct() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        authorization: `Bearer ${token}`
       },
       body: JSON.stringify(product),
     })

@@ -10,6 +10,7 @@ function Search({ onSearchChange }) {
   }
 
   return (
+    
     <div className="search-container">
       <HiOutlineSearch className="search-icon" />
       <input

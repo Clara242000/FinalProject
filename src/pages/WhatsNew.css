@@ -23,7 +23,7 @@
   display: flex;
   list-style-type: none;
   gap: 40px;
-  overflow-y: scroll ;
+  overflow: auto ;
   height: 365px;
   
 }

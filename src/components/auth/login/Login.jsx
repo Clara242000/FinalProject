@@ -1,9 +1,14 @@
+
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { TokenContext } from "../../../App";
+
 
 export default function Login(){
  
     const navigate = useNavigate();
-
+    const { setToken } = useContext(TokenContext);
+    
    async function login(event){
         event.preventDefault();
 
@@ -24,7 +29,8 @@ export default function Login(){
         })
        
         const body = await response.json();
-        localStorage.setItem('accessToken', JSON.stringify(body.accessToken));
+        localStorage.setItem('accessToken', body.accessToken);
+        setToken(body.accessToken);
         navigate('/products');
        
         } 

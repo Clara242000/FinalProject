@@ -1,12 +1,17 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./EditProduct.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { TokenContext } from "../../App";
 
 //citire,creare produse- GET , PUT
-async function retrieveProduct(setProduct, produsid){
+async function retrieveProduct(token, setProduct, produsid){
     console.log({produsid});
     const trimId = produsid.trim();
-    const response = await fetch(`http://localhost:3000/produse/${trimId}`);
+    const response = await fetch(`http://localhost:3000/produse/${trimId}`, {
+      headers: {
+        authorization: `Bearer ${token}`
+      }
+    });
     const produs = await response.json();
 
     setProduct(produs);
@@ -14,6 +19,7 @@ async function retrieveProduct(setProduct, produsid){
 export default function EditProduct() {
     const navigate = useNavigate();
     const { idFromPath } = useParams();
+    const { token } = useContext(TokenContext);
     const [product, setProduct] = useState({
         title: '',
         imageUrl: '',
@@ -23,8 +29,8 @@ export default function EditProduct() {
       });
 
       useEffect( () => {
-        retrieveProduct(setProduct, idFromPath); 
-     }, [idFromPath]);
+        retrieveProduct(token, setProduct, idFromPath); 
+     }, [idFromPath, token]);
        
       function editProduct(event) {
         event.preventDefault();
@@ -44,6 +50,7 @@ export default function EditProduct() {
           body: JSON.stringify(updatedProduct),
           headers: {
             "Content-Type": "application/json",
+            authorization: `Bearer ${token}`
           },
         })
           .then(() => navigate('/products'));

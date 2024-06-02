@@ -1,15 +1,20 @@
 // import { produse } from "../../data/data";
 import { useParams , useNavigate} from "react-router-dom";
 import './ProductsDetails.css';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { TokenContext } from "../../App";
 
 
-async function retrieveProduct(setProduct, produsid){
+async function retrieveProduct(token, setProduct, produsid){
     console.log({produsid});
     const trimId = produsid.trim();
-    const response = await fetch(`http://localhost:3000/produse/${trimId}`);
+    const response = await fetch(`http://localhost:3000/produse/${trimId}`, {
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    });
     const produs = await response.json();
-
+   
     setProduct(produs);
 }
 
@@ -19,10 +24,11 @@ async function retrieveProduct(setProduct, produsid){
     const { idFromPath } = useParams();   
     // const selectedProducts = produse.find((produs) =>produs.id === idFromPath);
     const navigate = useNavigate();
+    const { token } = useContext(TokenContext);
 
     useEffect( () => {
-       retrieveProduct(setProduct, idFromPath); 
-    }, [idFromPath]);
+       retrieveProduct(token, setProduct, idFromPath); 
+    }, [idFromPath, token]);
 
     useEffect(() => {
         if(!produs){
@@ -45,10 +51,13 @@ async function retrieveProduct(setProduct, produsid){
         if(userConfirmedAction) {
 
             fetch(`http://localhost:3000/produse/${id}` , {
-                method:'DELETE'
+                method:'DELETE',
+                headers: {
+                    authorization: `Bearer ${token}`
+                }
             })
     
-            .then(() => navigate('/'));
+            .then(() => navigate('/products'));
         }
         
         }

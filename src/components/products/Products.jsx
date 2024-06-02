@@ -5,7 +5,12 @@ import ProdusCard from '../../pages/ProdusCard';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Products.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import Search from '../search/Search';
+
+import {useNavigate} from 'react-router-dom';
+import { TokenContext } from '../../App';
+
 //GET
 
 //mutat in home
@@ -18,10 +23,19 @@ import { useEffect, useState } from 'react';
 
 
 //version2
-async function retrieveProducts(setProduse ){
+async function retrieveProducts(token, setProduse, navigate ){
   
   try{
-    const response = await fetch('http://localhost:3000/produse');
+    const response = await fetch('http://localhost:3000/produse', {
+      headers: {
+        'authorization': `Bearer ${token}`
+      }
+    });
+
+    if (response.status === 401) {
+      navigate('/login');
+    }
+
     const productsFromServer = await response.json();
       setProduse(productsFromServer);
    }
@@ -36,15 +50,25 @@ async function retrieveProducts(setProduse ){
 
 
 
-function Products({searchTerm}) {
+function Products() {
+  
+  const [searchTerm , setSearchTerm] = useState('');
+  const navigator = useNavigate();
+  const { token } = useContext(TokenContext);
+
+  function onSearchChange(_searchTerm){
+    setSearchTerm(_searchTerm) ;
+  }
+   
+
 const[produse, setProduse ]= useState([]);
 // const [loading , setLoading ] = useState(false)
 console.log(produse);
   // const filteredProduse = produse.filter(({ title }) => 
   //   title.includes(searchTerm.toUpperCase()));
   useEffect(() => {
-   retrieveProducts(setProduse);
-  }, []);
+   retrieveProducts(token, setProduse, navigator);
+  }, [token, navigator]);
   // if(loading){
   //   return <p>Loading ...</p>
   // }
@@ -74,7 +98,7 @@ console.log(produse);
             <h1>Our Products!</h1>
             <h2>Women Men Kids</h2>
           </header>
-
+          <Search onSearchChange={onSearchChange}/>
           
            {productsNotFound ? (
             <p>404 There were no products found for the given search input.</p>
