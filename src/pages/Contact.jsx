@@ -4,6 +4,7 @@ const Contact = () => (
   <div className="page contact">
     <h2>Contact</h2>
     <p>Ne poți contacta la următoarea adresă de email: contact@balletshop.com</p>
+    <p>Nu ezita sa ne contactezi</p>
   </div>
 );
 

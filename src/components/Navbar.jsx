@@ -16,11 +16,11 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <ul>
+        <ul>       
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/products">Produse</Link></li>
+          <li><Link to="/products">Products</Link></li>
           <li><Link to="/whatsnew">What`s New</Link></li>
-          <li><Link to="/create-product">Create Product</Link></li>
+          <li><Link to="/create-product">Create Products</Link></li>
           {/* <li><Link to="/edit-product">Edit Product</Link></li> */}
           {
             !token && (

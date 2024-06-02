@@ -61,9 +61,12 @@ export default function EditProduct() {
       }
 
   return ( 
+    
         <form onSubmit={editProduct}>
           <fieldset>
-            <label htmlFor="title">Title</label>
+            
+           <label htmlFor="title">Title : </label>
+            
             <input
               name="title"
               className="form-input"
@@ -76,7 +79,8 @@ export default function EditProduct() {
           </fieldset>
     
           <fieldset>
-            <label htmlFor="imgUrl">Image Url:</label>
+            <label htmlFor="imgUrl">Link : </label>
+          
             <input
               name="url"
               className="form-input"
@@ -88,7 +92,8 @@ export default function EditProduct() {
           </fieldset>
     
           <fieldset>
-            <label htmlFor="year">Year</label>
+            <label htmlFor="year">Date : </label>
+            
             <input
               name="year"
               className="form-input"
@@ -100,20 +105,20 @@ export default function EditProduct() {
           </fieldset>
     
           <fieldset>
-            <label htmlFor="rating">Rating</label>
+            <label htmlFor="rating">Rating : </label>
+            
             <select name="rating" id="rating" required defaultValue={product.rating}>
-              <option disabled>Select one </option>
-              <option value="pg">PG</option>
-              <option value="ap">AP</option>
-              <option value="18+">18+</option>
+              <option >Select one </option>
+              <option value="pg">⭐</option>
+              <option value="ap">⭐⭐</option>
+              <option value="18+">⭐⭐⭐</option>
             </select>
           </fieldset>
     
           <fieldset>
-            <label>Category</label>
-    
             <div>
-              <label htmlFor="product">Product</label>
+            <label>Category : </label>   
+              <label htmlFor="product"> Woman</label>
               <input
                 name="category"
                 type="radio"
@@ -123,7 +128,17 @@ export default function EditProduct() {
                 defaultChecked={product.category === "product"}
               />
     
-              <label htmlFor="leotards">Leotard Woman</label>
+              <label htmlFor="leotards">Kids</label>
+              <input
+                name="category"
+                type="radio"
+                value="leotards"
+                id="leotards"
+                required
+                defaultChecked={product.category === "leotards"}
+              />
+
+              <label htmlFor="leotards">Men</label>
               <input
                 name="category"
                 type="radio"
@@ -135,6 +150,7 @@ export default function EditProduct() {
             </div>
           </fieldset>
           <button type="submit">Update Product</button>
+    
         </form>
       );
     }

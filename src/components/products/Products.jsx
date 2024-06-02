@@ -95,8 +95,8 @@ console.log(produse);
    return(
       <section>
           <header>
-            <h1>Our Products!</h1>
-            <h2>Women Men Kids</h2>
+            {/* <h1>Our Products!</h1> */}
+            {/* <h2>Women Men Kids</h2> */}
           </header>
           <Search onSearchChange={onSearchChange}/>
           
@@ -104,7 +104,7 @@ console.log(produse);
             <p>404 There were no products found for the given search input.</p>
         ) : (
           <section>
-            <h3>Woman</h3>
+            <h3>Women</h3>
           <ul className='produs-list'>
             {
               filteredProduse.filter((produs) => produs.category === 'Leotard Woman').map((produsItem) => (

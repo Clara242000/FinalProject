@@ -12,3 +12,7 @@ header{
     flex-direction: column;
 }
 
+h3{
+    color: white;
+    text-align: center;
+}

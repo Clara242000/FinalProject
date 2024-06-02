@@ -21,11 +21,12 @@ function ProdusCard( {produsElement, large = false } ) {
                   {rating}
                 </span>
                 <span className='produs__category'>
-                  {category}
+                  {category} 
                 </span>
+                200 $
                 </div>
                 
-                <h3 className='produs__title'>{title}</h3>
+                <h3 className='produs__title'>{title} </h3>
               </div>
               </li>
     );

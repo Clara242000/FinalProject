@@ -36,28 +36,28 @@ export function Register(){
         <form onSubmit={register}>
 
             <fieldset>
-                <label htmlFor="username">Username: </label>
+                <label htmlFor="username">Username : </label>
                 <div>
                 <input type="text" id="username" name="username"/>
                 </div>
             </fieldset>
 
             <fieldset>
-                <label htmlFor="email">Email: </label>
+                <label htmlFor="email">Email : </label>
                 <div>
                 <input type="email" id="email" name="email"/>
                 </div>
             </fieldset>
 
             <fieldset>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Password :</label>
                 <div>
                 <input type="password" id="password" name="password"/>
                 </div>
             </fieldset>
 
             <fieldset>
-                <label htmlFor="reTypePassword">Re type password:</label>
+                <label htmlFor="reTypePassword">Re type password :</label>
                 <div>
                 <input type="password" id="reTypePassword" name="reTypePassword"/>
                 </div>

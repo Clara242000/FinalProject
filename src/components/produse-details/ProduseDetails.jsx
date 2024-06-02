@@ -74,17 +74,23 @@ async function retrieveProduct(token, setProduct, produsid){
 
          
     return(
-        <section>
-            <header>
+        <section className="produs-detail">
+            <p className="produs-detail__category" >
+               <strong>Category :</strong> <i>{category}</i>  
+            </p>
+           
                 <h3>{title}</h3>
-            </header>
+            
 
+            <div className="button-edit-delete">
+            <button  className="button-produsdetails" onClick={deleteProduct}>Delete product</button>
+
+            <button className="button-produsdetails" onClick={updateButton}>Edit product</button>
+            </div>
+            <br /><br />
             < img src={imageUrl}  />
 
-            <p className="produs-detail__category" >Category : {category}</p>
             
-            <button onClick={deleteProduct}>Delete product</button>
-            <button onClick={updateButton}>Edit product</button>
 
         </section>
     )

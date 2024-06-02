@@ -78,7 +78,7 @@ export default function CreateProduct() {
       <fieldset>
         <label htmlFor="rating">Rating</label>
         <select name="rating" id="rating" required>
-          <option disabled>Select one </option>
+          <option >Select one </option>
           <option value="pg">PG</option>
           <option value="ap">AP</option>
           <option value="18+">18+</option>

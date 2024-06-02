@@ -39,14 +39,14 @@ export default function Login(){
     <form onSubmit={login}>
 
             <fieldset>
-                <label htmlFor="email">Email: </label>
+                <label htmlFor="email">Email : </label>
                 <div>
                 <input type="email" id="email" name="email"/>
                 </div>
             </fieldset>
 
             <fieldset>
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Password :</label>
                 <div>
                 <input type="password" id="password" name="password"/>
                 </div>

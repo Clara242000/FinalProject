@@ -3,30 +3,32 @@ import "./Home.css";
 
 const Home = () => {
   return (
+    
     <div className="home-page">
+      
      
       <div>
         <img
           className="image-home"
-          src={"/src/assets/images/image9.jpeg"}
+          src={"/src/assets/images/image13.jpeg"}
           alt=""
         />
       </div>
       <div className="home-info">
         <p>
-          <p>
-        Arabesque este destinația ta principală pentru
-            toate produsele necesare dansatorilor de balet. 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h2>Arabesque  </h2> 
+        &nbsp;&nbsp; <strong>Arabesque</strong> este destinația ta principală pentru
+        toate produsele necesare dansatorilor de balet. 
             <br />
-            Fie că ești un
-            dansator profesionist sau un începător pasionat, vei găsi tot ce ai
-            nevoie pentru a străluci pe scenă.
-          </p>
-          Rămâi la curent cu ultimele tendințe și produse din lumea baletului
-          vizitând secțiunea noastră de <strong>What`s New</strong>. Aici vei
-          găsi cele mai recente lansări de produse, recomandări personalizate și
-          noutăți din domeniu. Ne dorim să fii mereu informat și inspirat,
-          astfel încât să îți poți exprima creativitatea la maximum.
+            Fie că ești un dansator profesionist sau un începător pasionat, vei găsi tot ce ai
+        nevoie pentru a străluci pe scenă.
+          <br /><br />
+          &nbsp;&nbsp;Rămâi la curent cu ultimele tendințe și produse din lumea baletului
+        vizitând secțiunea noastră de <strong>What`s New</strong>.
+          <br /><br />
+        &nbsp; &nbsp;Aici vei găsi cele mai recente lansări de produse, recomandări personalizate și
+        noutăți din domeniu. Ne dorim să fii mereu informat și inspirat,
+        astfel încât să îți poți exprima creativitatea la maximum.
         </p>
       </div>
     </div>
