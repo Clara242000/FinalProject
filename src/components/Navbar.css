@@ -1,51 +1,79 @@
-header {
-  background-color: #376775;
-  padding: 1rem;
-  color: #376775;
-  width: 100%;
+/* 
+body {
+  background-color:#56563d;
+} */
+
+
+.navbar__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+/* background-color: #56563d; */
+
+.navbar__container {
+  display: flex;
+  align-items: center;
 }
 
+.navbar__toggle-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
 
-nav ul {
-  display: flex;
-  justify-content: space-around;
+.navbar__menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Ascunde meniul în stânga */
+  width: 250px;
+  height: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* padding: 20px; */
+  overflow-y: auto;
+  transition: left 0.3s ease;
+}
+
+.navbar__menu.open {
+  left: 0; /* Afișează meniul */
+}
+
+.navbar__menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
 }
 
-nav ul li a {
+.navbar__menu li {
+  margin: 10px 0;
+}
+
+.navbar__menu li a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  font-size: 1.2em;
 }
 
-nav ul li a:hover {
-  background-color: #376775;
+.navbar__menu li a:hover {
+  color: #6e94bc;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-
-li{
+.navbar__close-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 20px;
   color: white;
 }

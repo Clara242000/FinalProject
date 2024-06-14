@@ -2,7 +2,7 @@ import PropTypes from 'prop-types' ;
 import './ProdusCard.css'
 
 function ProdusCard( {produsElement, large = false } ) {
-    const {id, imageUrl , year , rating , category , title} = produsElement;
+    const {id, imageUrl ,  rating , category , title} = produsElement;
     return (
         <li className={`produs ${ large ? "produs--large" : "produs--small" }`} key={id}>
                 <img className='produs__image' src={imageUrl}/>
@@ -14,19 +14,23 @@ function ProdusCard( {produsElement, large = false } ) {
 
             <div className='produs__info'>
               <div> 
-                <span className='produs__year'>
+                {/* <span className='produs__year'>
                    {year}
-                </span>
-                <span className='produs__rating'>
-                  {rating}
-                </span>
+                </span> */}
+                <br />
                 <span className='produs__category'>
                   {category} 
+                  <br />
                 </span>
+                <br />
                 200 $
                 </div>
                 
                 <h3 className='produs__title'>{title} </h3>
+                <span className='produs__rating'>
+                  {rating}
+                  <br />
+                </span>
               </div>
               </li>
     );

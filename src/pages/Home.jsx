@@ -1,62 +1,103 @@
+// import "./Home.css";
+
+// const Home = () => {
+//   return (
+//     <div className="home-page">
+//       <div>
+//         <img
+//           className="image-home"
+//           src={"/src/assets/images/image13.jpeg"} /* Verifică calea imaginii */
+//           alt=""
+//         />
+//       </div>
+//       <div className="home-info">
+    
+//         <h3>Let`s dance like...
+//           <br />
+//         ...Nobody is watching !</h3>
+//         <br />
+//         <p>
+//           Arabesque este destinația ta principală pentru toate produsele necesare dansatorilor de balet. Fie că ești un dansator profesionist sau un începător pasionat, vei găsi tot ce ai nevoie pentru a străluci pe scenă. Rămâi la curent cu ultimele tendințe și produse din lumea baletului vizitând secțiunea noastră de What`s New. Aici vei găsi cele mai recente lansări de produse, recomandări personalizate și noutăți din domeniu. Ne dorim să fii mereu informat și inspirat, astfel încât să îți poți exprima creativitatea la maximum.
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
+
+
+
+
+
+
+
+
+// import "./Home.css";
+
+// const Home = () => {
+//   return (
+//     <div className="home-page">
+//       <div className="image-container">
+//         <img
+//           className="image-home"
+//           src="/src/assets/images/image14.jpg" // Verifică calea imaginii corectă
+//           alt="Ballet"
+//         />
+//       </div>
+//       <div className="home-info">
+//         <h3 className="home-title">Ballet, a hidden language of the soul</h3>
+//         <p>
+//           Arabesque is your go-to destination for ballet dancers essentials, whether you`re a professional or a passionate beginner. Explore the latest releases and trends in our What`s New section for inspiration and fresh insights into the ballet world.
+//         </p>
+//         <div className="home-buttons">
+//           <a href="/products" className="button">View Products</a>
+//           <a href="/whatsnew" className="button">What`s New</a>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
+
+
 import "./Home.css";
-// import image6 from '../assets/images/image6.jpeg';
 
 const Home = () => {
   return (
-    
     <div className="home-page">
+      <div className="content-container">
+        <div className="image-container">
+          <img
+            className="image-home"
+            src="/src/assets/images/image14.jpg" // Verifică calea imaginii corectă
+            alt="Balet"
+          />
+        </div>
+        <div className="home-info">
+          <h3 className="home-title">Ballet, a hidden language of the soul</h3>
+          <p>
+          Arabesque is your go-to destination for ballet dancers essentials, whether you are a professional or a passionate beginner. Explore the latest releases and trends in the News section for inspiration and fresh perspectives in the ballet world.
+          </p>
+          <p className="additional-text">
+          Discover our unique collections and enjoy comfort and style in every move. Join our community of passionate dancers and let yourself be inspired!
+          </p>
+          <div className="home-buttons">
+            <a href="/products" className="button">Our Products</a>
+            <a href="/whatsnew" className="button">What`s</a>
+          </div>
+        </div>
+      </div>
       
-     
-      <div>
-        <img
-          className="image-home"
-          src={"/src/assets/images/image13.jpeg"}
-          alt=""
-        />
-      </div>
-      <div className="home-info">
-        <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h2>Arabesque  </h2> 
-        &nbsp;&nbsp; <strong>Arabesque</strong> este destinația ta principală pentru
-        toate produsele necesare dansatorilor de balet. 
-            <br />
-            Fie că ești un dansator profesionist sau un începător pasionat, vei găsi tot ce ai
-        nevoie pentru a străluci pe scenă.
-          <br /><br />
-          &nbsp;&nbsp;Rămâi la curent cu ultimele tendințe și produse din lumea baletului
-        vizitând secțiunea noastră de <strong>What`s New</strong>.
-          <br /><br />
-        &nbsp; &nbsp;Aici vei găsi cele mai recente lansări de produse, recomandări personalizate și
-        noutăți din domeniu. Ne dorim să fii mereu informat și inspirat,
-        astfel încât să îți poți exprima creativitatea la maximum.
-        </p>
-      </div>
     </div>
-
-    //   <div className="page home">
-    //     <br />
-    //     {/* <h2>Bun venit la Ballet Shop!</h2> */}
-    //     <br /><br /> <br />
-
-    //    {/* <img className='imagehome' src={image1} alt="image1" /> */}
-
-    //     <p>
-    //       <strong>Ballet Shop</strong> este destinația ta principală pentru toate produsele necesare dansatorilor de balet. Fie că ești un dansator profesionist sau un începător pasionat, vei găsi tot ce ai nevoie pentru a străluci pe scenă. De la îmbrăcăminte și încălțăminte de balet de cea mai înaltă calitate, până la accesorii esențiale și echipamente de antrenament, Ballet Shop oferă o gamă variată de produse care să îți susțină pasiunea pentru dans.
-    //     </p>
-    //     <h3>Produse de Înaltă Calitate</h3>
-    //     <p>
-    //       La Ballet Shop, ne mândrim cu selecția noastră de produse de înaltă calitate. Colaborăm cu branduri renumite și producători de top pentru a ne asigura că fiecare produs pe care îl oferim este durabil, confortabil și stilat. De la poante și balerini, până la tricouri și tutu-uri, toate produsele noastre sunt alese cu grijă pentru a răspunde celor mai exigente standarde ale dansatorilor de balet.
-    //     </p>
-    //     <h3>Noutăți și Recomandări</h3>
-    //     <p>
-    //       Rămâi la curent cu ultimele tendințe și produse din lumea baletului vizitând secțiunea noastră de <strong>What`s New</strong>. Aici vei găsi cele mai recente lansări de produse, recomandări personalizate și noutăți din domeniu. Ne dorim să fii mereu informat și inspirat, astfel încât să îți poți exprima creativitatea la maximum.
-    //     </p>
-    //     <h3>Comunitatea Ballet Shop</h3>
-    //     <p>
-    //       Ballet Shop nu este doar un magazin; este o comunitate. În secțiunea <strong>Contact</strong>, poți afla mai multe despre noi și cum să ne contactezi pentru orice întrebări sau sugestii. Suntem aici pentru a te ajuta și pentru a te susține în călătoria ta de dansator.
-    //     </p>
-    //   </div>
   );
 };
 
 export default Home;
+

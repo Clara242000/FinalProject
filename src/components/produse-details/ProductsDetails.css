@@ -1,33 +1,52 @@
-.produs-detail__category{
-    color: white;
-}
+/* ProductsDetails.css */
 
-img{
-    height: 300px;
-    /* border-radius: 10%; */
-    
-}
+ .produs-detail {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #6e94bc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .produs-detail__category {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .produs-detail h3 {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .button-edit-delete {
+    margin-top: 20px;
+  }
+  
+  .button-produsdetails {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #6e94bc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-produsdetails:hover { 
+     background-color: #d6325c; 
+     transition: background-color 0.3s ease; 
+  }
+  
+  .img-produs {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
 
-.produs-detail{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
-.button-edit-delete{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.produs-detail{
-    display: flex;
-}
-
-/* .button-produsdetails{
-    color: white;
-   
-} */

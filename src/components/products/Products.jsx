@@ -94,10 +94,10 @@ console.log(produse);
 
    return(
       <section>
-          <header>
+          
             {/* <h1>Our Products!</h1> */}
             {/* <h2>Women Men Kids</h2> */}
-          </header>
+          
           <Search onSearchChange={onSearchChange}/>
           
            {productsNotFound ? (
@@ -107,40 +107,40 @@ console.log(produse);
             <h3>Women</h3>
           <ul className='produs-list'>
             {
-              filteredProduse.filter((produs) => produs.category === 'Leotard Woman').map((produsItem) => (
+              filteredProduse.filter((produs) => produs.title === 'Leotard Woman').map((produsItem) => (
             <Link key={produsItem.id} to={`/produs/ ${produsItem.id} `}>
             <ProdusCard produsElement = {produsItem} />           
             </Link>
 
             ))}
           </ul>         
-
+            <br />
               <h3>Kids</h3>
            <ul className='produs-list'>
            {
-          filteredProduse.filter((produs) => produs.category === 'Leotard Kids').map((produsItem) => (
+          filteredProduse.filter((produs) => produs.title === 'Leotard Kids').map((produsItem) => (
            <Link key={produsItem.id} to={`/produs/ ${produsItem.id} `}>
            <ProdusCard produsElement = {produsItem} />           
            </Link>
 
            ))}
          </ul> 
-
+          <br />
            <h3>Men</h3>
           <ul className='produs-list'>
           {
-         filteredProduse.filter((produs) => produs.category === 'Men').map((produsItem) => (
+         filteredProduse.filter((produs) => produs.title === 'Men').map((produsItem) => (
           <Link key={produsItem.id} to={`/produs/ ${produsItem.id} `}>
           <ProdusCard produsElement = {produsItem} />           
           </Link>
 
           ))}
         </ul> 
-
+          <br />
         <h3>Other</h3>
           <ul className='produs-list'>
           {
-         filteredProduse.filter((produs) => produs.category !== 'Men' && produs.category !== 'Leotard Woman' && produs.category !== 'Leotard Kids' ).map((produsItem) => (
+         filteredProduse.filter((produs) => produs.title !== 'Men' && produs.title !== 'Leotard Woman' && produs.title !== 'Leotard Kids' ).map((produsItem) => (
           <Link key={produsItem.id} to={`/produs/ ${produsItem.id} `}>
           <ProdusCard produsElement = {produsItem} />           
           </Link>

@@ -82,14 +82,15 @@ async function retrieveProduct(token, setProduct, produsid){
                 <h3>{title}</h3>
             
 
+            <br /><br />
+            
+            < img src={imageUrl}  />
+
             <div className="button-edit-delete">
             <button  className="button-produsdetails" onClick={deleteProduct}>Delete product</button>
 
             <button className="button-produsdetails" onClick={updateButton}>Edit product</button>
             </div>
-            <br /><br />
-            < img src={imageUrl}  />
-
             
 
         </section>

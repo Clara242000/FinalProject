@@ -1,165 +1,115 @@
-// import  { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
 
-// export default function ProfileEdit() {
-//     const navigate = useNavigate();
-//     const [user, setUser] = useState({ username: '', email: '', password: '', reTypePassword: '' });
-//     const token = localStorage.getItem('token'); // Assume token is stored in localStorage
 
-//     useEffect(() => {
-//         // Fetch the current user profile
-//         fetch('http://localhost:3000/edityourprofile', {
-//             method: 'GET',
-//             headers: {
-//                 'Authorization': `Bearer ${token}`,
-//                 'Content-Type': 'application/json'
-//             }
-//         })
-//         .then(response => response.json())
-//         .then(data => setUser({ ...data, password: '', reTypePassword: '' }))
-//         .catch(error => console.error('Error fetching profile:', error));
-//     }, [token]);
+import { useContext, useEffect, useState } from "react";
+import { IdContext, TokenContext } from "../../../App";
+import { useNavigate } from "react-router-dom";
 
-//     function handleChange(event) {
-//         const { name, value } = event.target;
-//         setUser(prevState => ({ ...prevState, [name]: value }));
-//     }
+export default function EditYourProfile() {
+  const { token } = useContext(TokenContext);
+  const { id } = useContext(IdContext);
+  const navigate = useNavigate();
+  // const { idFromPath } = useParams();
 
-//     function handleSubmit(event) {
-//         event.preventDefault();
-//         if (user.password !== user.reTypePassword) {
-//             console.warn("Passwords don't match");
-//             return;
-//         }
+  const [userData, setUserData] = useState({
+    email: "",
+    username: "",
+    password: "",
+  });
+// console.log('editprofile' + id);
+  useEffect(() => {
+    async function fetchUserData() {
+      try {
+        const response = await fetch(`http://localhost:3000/users/${id}`, {
+          method: "GET",
+          headers: {
+            'Authorization': `Bearer ${token}`
+            // "Content-Type": "application/json",
+          },
+        });
 
-//         const updatedUser = {
-//             email: user.email,
-//             username: user.username,
-//             password: user.password
-//         };
+        if (!response.ok) {
+          throw new Error("Failed to fetch user data");
+        }
 
-//         fetch('http://localhost:3000/edityourprofile', {
-//             method: 'PUT',
-//             headers: {
-//                 'Authorization': ` Bearer ${token} `,
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(updatedUser)
-//         })
-//         .then(response => response.json())
-//         .then(() => navigate('/products'))
-//         .catch(error => console.error('Error updating profile:', error));
-//     }
+        const data = await response.json();
+        console.log(data);
+        setUserData({
+          email: data.email,
+          username: data.username,
+          password: '',
+        });
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    }
 
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <fieldset>
-//                 <label htmlFor="username">Username:</label>
-//                 <div>
-//                     <input
-//                         type="text"
-//                         id="username"
-//                         name="username"
-//                         value={user.username}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//             </fieldset>
+    fetchUserData();
+  }, [id, token]);
 
-//             <fieldset>
-//                 <label htmlFor="email">Email:</label>
-//                 <div>
-//                     <input
-//                         type="email"
-//                         id="email"
-//                         name="email"
-//                         value={user.email}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//             </fieldset>
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-//             <fieldset>
-//                 <label htmlFor="password">Password:</label>
-//                 <div>
-//                     <input
-//                         type="password"
-//                         id="password"
-//                         name="password"
-//                         value={user.password}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//             </fieldset>
+    const formElement = event.target;
+    const { email, username , password} = formElement;
 
-//             <fieldset>
-//                 <label htmlFor="reTypePassword">Re-type Password:</label>
-//                 <div>
-//                     <input
-//                         type="password"
-//                         id="reTypePassword"
-//                         name="reTypePassword"
-//                         value={user.reTypePassword}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//             </fieldset>
+    const updatedUserData = {
+      email: email.value,
+      username: username.value,
+      password: password.value,
+    };
 
-//             <button type="submit">Update Profile</button>
-//         </form>
-//     );
-// }
+    try {
+      const response = await fetch(`http://localhost:3000/users/${id}`, {
+        method: "PUT",
+        headers: {
+         'Authorization' : `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedUserData),
+      });
 
-{/* <fieldset>
-<label htmlFor="username">Username</label>
-<input
-  name="username"
-  className="form-input"
-  id="username"
-  type="text"
-  required
-  minLength={3}
-  value={profile.username}
-  onChange={handleChange}
-/>
-</fieldset>
+      if (!response.ok) {
+        throw new Error("Failed to update user data");
+      }
 
-<fieldset>
-<label htmlFor="email">Email</label>
-<input
-  name="email"
-  className="form-input"
-  id="email"
-  type="email"
-  required
-  value={profile.email}
-  onChange={handleChange}
-/>
-</fieldset>
+      navigate("/products"); // Redirect to products page after successful update
+    } catch (error) {
+      console.error("Error updating user data:", error);
+    }
+  }
 
-<fieldset>
-<label htmlFor="dateOfBirth">Date of Birth</label>
-<input
-  name="dateOfBirth"
-  className="form-input"
-  type="date"
-  id="dateOfBirth"
-  required
-  value={profile.dateOfBirth}
-  onChange={handleChange}
-/>
-</fieldset>
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setUserData((prevUserData) => ({
+      ...prevUserData,
+      [name]: value,
+    }));
+  }
 
-<fieldset>
-<label htmlFor="bio">Bio</label>
-<textarea
-  name="bio"
-  className="form-input"
-  id="bio"
-  required
-  value={profile.bio}
-  onChange={handleChange}
-/>
-</fieldset>
+  return (
+    <form onSubmit={handleSubmit}>
+      <fieldset>
+        <label htmlFor="username">Username:</label>
+        <div>
+          <input type="text" id="username" name="username" value={userData.username} onChange={handleInputChange} />
+        </div>
+      </fieldset>
 
-<button>Save Profile</button> */}
+      <fieldset>
+        <label htmlFor="email">Email:</label>
+        <div>
+          <input type="email" id="email" name="email" value={userData.email} onChange={handleInputChange}/>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label htmlFor="password">Password:</label>
+        <div>
+          <input type="password" id="password" name="password" value={userData.password} onChange={handleInputChange}/>
+        </div>
+      </fieldset>
+
+      <button type="submit">Save Changes</button>
+    </form>
+  );
+}

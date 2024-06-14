@@ -1,7 +1,6 @@
 //REGISTER : - METHODS: PUT
 
 
-
 export function Register(){
 
     function register(event){

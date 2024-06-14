@@ -1,30 +1,54 @@
- .page.whatsnew {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* WhatsNew.css */
+
+/* Stiluri pentru carusel */
+.slick-slider {
+  margin: 0 auto;
+  width: 80%; /* Ajustează lățimea caruselului conform necesităților */
+}
+
+.slick-slide {
+  padding: 0 10px; /* Adaugă un spațiu între carduri */
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: #fff; /* Schimbă culoarea punctelor de navigare */
+}
+
+/* Stiluri pentru cardurile produselor */
+.produs {
+  display: inline-block;
+  margin: 0;
+  width: calc(33.33% - 20px); /* Ajustează lățimea cardului și spațiul dintre ele */
+  padding: 0 10px;
+}
+
+.produs__image {
+  border-radius: 8px;
+}
+
+.produs__info {
   text-align: center;
-  padding: 2rem;
 }
 
-.page.whatsnew h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.produs__title {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
 }
 
-.page.whatsnew p {
-  font-size: 1.2rem;
-  color: #555;
-} 
-
-
-.trending{
-  display: flex;
-  list-style-type: none;
-  gap: 40px;
-  overflow: auto ;
-  height: 365px;
-  
-  
+.produs__year,
+.produs__rating,
+.produs__category {
+  font-size: 14px;
+  color: #666;
 }

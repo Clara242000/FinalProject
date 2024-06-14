@@ -1,13 +1,60 @@
+/* CreateProduct.css */
+
+form {
+   max-width: 600px; /* Ajustează lățimea maximă a formularului */
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ fieldset {
+   margin-bottom: 20px;
+ }
+ 
  label {
-     color: white ;
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
  }
-
- fieldset{
-    border: none;
+ 
+ .form-input {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
  }
-
- .form-input{
-    border: 1px solid white;
-    border-radius: 20px;
-    color: white;
+ 
+ button {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: #ff3f6c;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
  }
+ 
+ button:hover {
+   /* background-color: #d6325c; */
+   transition: background-color 0.3s ease;
+ }
+ 
+ /* Optional: Stilizare pentru select */
+ select {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+ }
+ 
+ /* Optional: Stilizare pentru radio buttons */
+ input[type="radio"] {
+   margin-right: 5px;
+ }
+ 
+ 
