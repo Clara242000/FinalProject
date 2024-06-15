@@ -125,10 +125,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Înălțimea să fie pe tot ecranul */
-  padding: 50px;
+  padding: 0px;
   background-color: rgb(16, 20, 31); /* Fundal teal */
   color: #7f9ba7;
   font-family: 'Roboto', sans-serif;
+  flex-direction: column;
 }
 
 .content-container {
@@ -212,3 +213,14 @@
     font-size: 1;
   }
 }
+
+.home-page h1{
+  text-align: center;
+  margin-left: 308px;
+  font-size: 57px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+ color: #91bbe7
+}
+

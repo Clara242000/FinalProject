@@ -8,7 +8,8 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
+  margin-bottom: 0px;
 }
 /* background-color: #56563d; */
 
@@ -54,6 +55,7 @@ body {
 
 .navbar__menu li {
   margin: 10px 0;
+  color: white;
 }
 
 .navbar__menu li a {

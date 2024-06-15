@@ -109,9 +109,9 @@ export default function EditProduct() {
             
             <select name="rating" id="rating" required defaultValue={product.rating}>
               <option >Select one </option>
-              <option value="pg">⭐</option>
-              <option value="ap">⭐⭐</option>
-              <option value="18+">⭐⭐⭐</option>
+              <option value="pg">1/3</option>
+              <option value="ap">2/3</option>
+              <option value="18+">3/3</option>
             </select>
           </fieldset>
     

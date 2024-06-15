@@ -39,7 +39,9 @@ export default function CreateProduct() {
   }
 
   return (
+   
     <form onSubmit={saveProduct}>
+      <h1>You can create your wish product here  </h1>
       <fieldset>
         <label htmlFor="title">Title</label>
         <input

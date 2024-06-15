@@ -41,7 +41,7 @@ export default function Login(){
 
     return(
     <form onSubmit={login}>
-
+            <h1>Log in</h1>
             <fieldset>
                 <label htmlFor="email">Email : </label>
                 <div>

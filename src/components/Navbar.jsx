@@ -23,6 +23,7 @@ const Navbar = () => {
   return (
     <header className="navbar__header">
       <div className="navbar__container">
+    
         
         <button className="navbar__toggle-button" onClick={toggleMenu}>
           ☰
@@ -34,7 +35,7 @@ const Navbar = () => {
             <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
             <li><Link to="/products" onClick={toggleMenu}>Products</Link></li>
             <li><Link to="/whatsnew" onClick={toggleMenu}>What`s New</Link></li>
-            <li><Link to="/create-product" onClick={toggleMenu}>Create Products</Link></li>
+            <li><Link to="/create-product" onClick={toggleMenu}>Wish Products</Link></li>
             {token ? (
               <>
                 <li><Link to={`/edit-profile/${id}`} onClick={toggleMenu}>Edit Profile</Link></li>

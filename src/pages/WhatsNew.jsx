@@ -1,6 +1,4 @@
-//carousel whats new//
 
-// import {whatsnewproduse} from '../data/data'
 import { useContext, useEffect, useState } from 'react';
 import  ProdusCard from './ProdusCard';
 import './WhatsNew.css';

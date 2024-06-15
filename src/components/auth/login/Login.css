@@ -1,7 +1,7 @@
 /* Stiluri pentru formularul de conectare */
 
 form {
-    max-width: 400px;
+    max-width: 368px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -26,6 +26,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+   
   }
   
   button {
@@ -44,3 +45,4 @@ form {
     transition: background-color 0.3s ease;
   }
   
+ 

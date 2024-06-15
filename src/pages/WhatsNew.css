@@ -1,54 +1,44 @@
-/* WhatsNew.css */
-
-/* Stiluri pentru carusel */
-.slick-slider {
-  margin: 0 auto;
-  width: 80%; /* Ajustează lățimea caruselului conform necesităților */
+.trending {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  list-style: none;
 }
 
-.slick-slide {
-  padding: 0 10px; /* Adaugă un spațiu între carduri */
+.trending a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-.slick-slide img {
-  width: 100%;
-  height: auto;
+.trending a:hover {
+  color: var(--accent-color);
+}
+
+.trending .produs-card {
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent-color);
   border-radius: 8px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.slick-dots {
-  bottom: 10px;
+.trending .produs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.slick-dots li button:before {
-  color: #fff; /* Schimbă culoarea punctelor de navigare */
+@media (max-width: 768px) {
+  .trending .produs-card {
+    width: calc(50% - 40px);
+  }
 }
 
-/* Stiluri pentru cardurile produselor */
-.produs {
-  display: inline-block;
-  margin: 0;
-  width: calc(33.33% - 20px); /* Ajustează lățimea cardului și spațiul dintre ele */
-  padding: 0 10px;
-}
-
-.produs__image {
-  border-radius: 8px;
-}
-
-.produs__info {
-  text-align: center;
-}
-
-.produs__title {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #333;
-}
-
-.produs__year,
-.produs__rating,
-.produs__category {
-  font-size: 14px;
-  color: #666;
+@media (max-width: 480px) {
+  .trending .produs-card {
+    width: calc(100% - 40px);
+  }
 }

@@ -1,22 +1,26 @@
 /* ProductsDetails.css */
 
  .produs-detail {
-    max-width: 600px; 
+    max-width: 340px; 
     margin: 0 auto;
     padding: 20px;
-    background-color: #6e94bc;
+    background-color: #ffffff5e;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .produs-detail__category {
     font-style: italic;
-    color: #666;
+    color: white;
   }
   
   .produs-detail h3 {
-    margin-top: 10px;
-    color: #333;
+    margin-top: 0px;
+    color: white;
+    margin-bottom: 0px;
   }
   
   .button-edit-delete {
@@ -28,7 +32,7 @@
     margin-right: 10px;
     border: 2px solid black;
     border-radius: 8px;
-    background-color: #6e94bc;
+    background-color: #384a5b;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -36,17 +40,18 @@
   }
   
   .button-produsdetails:hover { 
-     background-color: #d6325c; 
+     background-color: #01344b; 
      transition: background-color 0.3s ease; 
   }
   
-  .img-produs {
-    display: block;
-    max-width: 100%;
+  img {
+    display: flex;
+    /* max-width: 100%; */
     height: auto;
     margin-top: 20px;
     border-radius: 8px;
+    height: 200px;
+    margin-bottom: 10px;
   }
   
-
 

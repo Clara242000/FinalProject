@@ -95,16 +95,18 @@ console.log(produse);
    return(
       <section>
           
+          
             {/* <h1>Our Products!</h1> */}
             {/* <h2>Women Men Kids</h2> */}
-          
           <Search onSearchChange={onSearchChange}/>
           
            {productsNotFound ? (
-            <p>404 There were no products found for the given search input.</p>
-        ) : (
-          <section>
+             <p>404 There were no products found for the given search input.</p>
+            ) : (
+              <section>
+            <br />
             <h3>Women</h3>
+            <br />
           <ul className='produs-list'>
             {
               filteredProduse.filter((produs) => produs.title === 'Leotard Woman').map((produsItem) => (
@@ -137,7 +139,7 @@ console.log(produse);
           ))}
         </ul> 
           <br />
-        <h3>Other</h3>
+        <h3>Wish Products</h3>
           <ul className='produs-list'>
           {
          filteredProduse.filter((produs) => produs.title !== 'Men' && produs.title !== 'Leotard Woman' && produs.title !== 'Leotard Kids' ).map((produsItem) => (

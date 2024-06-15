@@ -1,34 +1,39 @@
 .search-container {
   display: flex;
   align-items: center;
-  background-color: #6e94bc;
+  background-color: #ffffff5e;
   border-radius: 20px;
   padding: 5px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 44px;
 }
 
 .search-icon {
-  color: #666;
+  color: white;
 }
 
 .search {
-  border: none;
+  border: 1px solid black;
+  border-radius: 10pc;
   outline: none;
   padding: 5px;
   margin-left: 5px;
   width: 100%; /* Ajustează lățimea câmpului de căutare conform necesităților */
   font-size: 16px;
   transition: width 0.3s; /* Adaugă o tranziție pentru lățimea câmpului de căutare */
+  background-color: #ffffff5e;
+  
 }
 
 .search::placeholder {
-  color: #999;
+  color: white;
 
 }
 
 .search:focus {
-  border: 2px solid gray; /* Schimbă culoarea chenarului când câmpul de căutare este focusat */
+  border: 2px solid black; /* Schimbă culoarea chenarului când câmpul de căutare este focusat */
   width: 100%; /* Extinde câmpul de căutare când este focusat */
   border-radius: 20px;
+ 
 }
 

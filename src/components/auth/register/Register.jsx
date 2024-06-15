@@ -33,7 +33,7 @@ export function Register(){
 
      return(
         <form onSubmit={register}>
-
+            <h1>Register</h1>
             <fieldset>
                 <label htmlFor="username">Username : </label>
                 <div>

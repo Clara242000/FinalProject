@@ -1,5 +1,4 @@
 
-
 import { useContext, useEffect, useState } from "react";
 import { IdContext, TokenContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
@@ -88,6 +87,7 @@ export default function EditYourProfile() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Edit your profile</h1>
       <fieldset>
         <label htmlFor="username">Username:</label>
         <div>

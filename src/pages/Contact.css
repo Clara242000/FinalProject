@@ -7,12 +7,13 @@
 .page.contact h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .page.contact p {
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
+  color:white;
 }
 
 /* Alte stiluri sau ajustări pot fi adăugate conform nevoilor */
