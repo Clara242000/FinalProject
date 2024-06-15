@@ -31,12 +31,11 @@
   color: #333;
 } */
 
-/* Adaugă alte stiluri sau ajustări în funcție de preferințele tale */
 
 
 
-/* Reset CSS */
-*/* General styles for the home page */
+
+
 
 
 
@@ -118,15 +117,15 @@
 
 
 
-{@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .home-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Înălțimea să fie pe tot ecranul */
+  height: 100vh; 
   padding: 0px;
-  background-color: rgb(16, 20, 31); /* Fundal teal */
+  background-color: rgb(16, 20, 31); 
   color: #7f9ba7;
   font-family: 'Roboto', sans-serif;
   flex-direction: column;
@@ -150,8 +149,8 @@
 }
 
 .image-home {
-  width: 100%; /* Ajustat pentru a umple containerul */
-  max-width: 300px; /* Limitare pentru lățimea maximă a imaginii */
+  width: 100%; 
+  max-width: 300px; 
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,13 +159,13 @@
 .home-info {
   flex: 2;
   padding: 20px;
-  text-align: left; /* Text aliniat la stânga */
+  text-align: left; 
 }
 
 .home-title {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #6e94bc; /* Culoare teal mai închisă pentru accentuare */
+  color: #6e94bc; 
 }
 
 .home-info p {
@@ -178,7 +177,7 @@
 
 .additional-text {
   font-size: 1.2em;
-  color: #c7d1da; /* Culoare mai deschisă pentru contrast */
+  color: #c7d1da; 
   margin-bottom: 20px;
 }
 
@@ -192,7 +191,7 @@
   padding: 10px 20px;
   font-size: 1.2em;
   color: white;
-  background-color: #384a5b; /* Buton teal */
+  background-color: #384a5b; 
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -200,10 +199,10 @@
 }
 
 .button:hover {
-  background-color: #01344b; /* Teal mai închis la hover */
+  background-color: #01344b;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   .home-title {
     font-size: 2em;

@@ -1,7 +1,4 @@
 
-
-
-
 import "./Home.css";
 
 const Home = () => {
@@ -12,7 +9,7 @@ const Home = () => {
         <div className="image-container">
           <img
             className="image-home"
-            src="/src/assets/images/image14.jpg" // Verifică calea imaginii corectă
+            src="/src/assets/images/image14.jpg" 
             alt="Balet"
           />
         </div>

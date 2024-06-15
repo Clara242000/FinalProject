@@ -1,7 +1,7 @@
-/* CreateProduct.css */
+
 
 form {
-   max-width: 600px; /* Ajustează lățimea maximă a formularului */
+   max-width: 600px; 
    margin: 0 auto;
    padding: 20px;
    background-color: #fff;
@@ -43,7 +43,7 @@ form {
    transition: background-color 0.3s ease;
  }
  
- /* Optional: Stilizare pentru select */
+ 
  select {
    width: 100%;
    padding: 10px;
@@ -52,7 +52,7 @@ form {
    box-sizing: border-box;
  }
  
- /* Optional: Stilizare pentru radio buttons */
+
  input[type="radio"] {
    margin-right: 5px;
  }

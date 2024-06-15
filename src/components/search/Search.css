@@ -18,9 +18,9 @@
   outline: none;
   padding: 5px;
   margin-left: 5px;
-  width: 100%; /* Ajustează lățimea câmpului de căutare conform necesităților */
+  width: 100%; 
   font-size: 16px;
-  transition: width 0.3s; /* Adaugă o tranziție pentru lățimea câmpului de căutare */
+  transition: width 0.3s; 
   background-color: #ffffff5e;
   
 }
@@ -31,8 +31,8 @@
 }
 
 .search:focus {
-  border: 2px solid black; /* Schimbă culoarea chenarului când câmpul de căutare este focusat */
-  width: 100%; /* Extinde câmpul de căutare când este focusat */
+  border: 2px solid black; 
+  width: 100%; 
   border-radius: 20px;
  
 }
