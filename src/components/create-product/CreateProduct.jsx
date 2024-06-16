@@ -81,9 +81,9 @@ export default function CreateProduct() {
         <label htmlFor="rating">Rating</label>
         <select name="rating" id="rating" required>
           <option >Select one </option>
-          <option value="pg">PG</option>
-          <option value="ap">AP</option>
-          <option value="18+">18+</option>
+          <option value="pg">1/3</option>
+          <option value="ap">2/3</option>
+          <option value="18+">3/3</option>
         </select>
       </fieldset>
 
@@ -91,7 +91,7 @@ export default function CreateProduct() {
         <label>Category</label>
 
         <div>
-          <label htmlFor="product">Product</label>
+          <label htmlFor="product">Leotard Kids</label>
           <input
             name="category"
             type="radio"
@@ -106,6 +106,15 @@ export default function CreateProduct() {
             type="radio"
             value="leotards"
             id="leotards"
+            required
+          />
+
+          <label htmlFor="product">Men</label>
+          <input
+            name="category"
+            type="radio"
+            value="product"
+            id="product"
             required
           />
         </div>

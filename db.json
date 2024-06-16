@@ -35,8 +35,8 @@
     },
     {
       "email": "wili@gmail.cpm",
-      "username": "Wili grosz",
-      "password": "$2a$10$8RGMoAdr63JfRZlS.cJo0u7btVhV.BBd2p3m.NLrcNIQZ84DOUzpG",
+      "username": "Wili grosz1",
+      "password": "$2a$10$ThHTtjHN6Z3O5kV4QQigGO02RuLEUWc1lcKFENO2cI35c4ZWKSoXe",
       "id": 6
     },
     {
@@ -68,6 +68,12 @@
       "username": "Diana Papp",
       "password": "$2a$10$1gIyTTzn3wmCSZFNpbS4Uu0CWlX.LAp62ddyDtYoI/r106RnlAX2m",
       "id": 11
+    },
+    {
+      "email": "clara1@gmail.com",
+      "password": "$2a$10$qLcaMwUmgyxrbO3aneuvF.Xajp6uYClj7BIPYH0p/WsEyRokEJdf6",
+      "username": "Clara1",
+      "id": 12
     }
   ],
   "produse": [
